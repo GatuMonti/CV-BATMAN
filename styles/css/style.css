@@ -1,0 +1,108 @@
+/*********ELEMENTOS IMPORTADOS************/
+/*---PALETAS DE COLORES---*/
+/*---FUENTES---*/
+/*----grid-----*/
+/*******ESTILOS DEL BODY******/
+.body {
+  max-width: 80vw;
+  height: auto;
+  margin: 0 auto;
+}
+
+.grid, .body {
+  display: grid;
+  grid-template: 0.9fr 0.5fr 2fr 0.5fr 0.1fr/1fr 1fr;
+  grid-template-areas: "header header" ". ." "contenido  contenido" ".  ." "footer footer";
+}
+
+.header {
+  background-color: #E6E6E6;
+  display: grid;
+  grid-area: header;
+  grid-template: 3fr 1fr/1fr;
+  grid-template-areas: "imagen" "titulo";
+}
+
+.titulos, .main .cards__titulo, .header__titulo {
+  background-color: #C4C4C4;
+  color: #005677;
+  letter-spacing: 0.5rem;
+  align-self: center;
+  justify-self: stretch;
+}
+
+.footer {
+  background-color: #005677;
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  box-shadow: 3px 6px 0px 0px rgba(0, 0, 0, 0.6);
+}
+
+/*############### ESTILOS UNIVERSALES###################
+#######################################################*/
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+}
+
+/*############## ESTILOS GENERALES ####################
+#######################################################*/
+/*---------------ESTILOS HEADER------------------------
+------------------------------------------------------*/
+.header {
+  align-self: flex-start;
+  padding-top: 1.5rem;
+}
+.header__img {
+  grid-area: imagen;
+  justify-self: center;
+}
+.header__titulo {
+  grid-area: titulo;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+/*---------------ESTILOS MAIN------------------------
+------------------------------------------------------*/
+.main {
+  grid-area: contenido;
+}
+.main .cards__titulo {
+  padding: 0.25rem;
+}
+.main .cards .lista-cards {
+  padding: 1rem 0rem;
+}
+.main .cards .lista-cards__items {
+  display: flex;
+  padding: 0.25rem;
+}
+.main .cards .lista-cards__items--negrita {
+  font-weight: bold;
+}
+.main .cards .lista-cards__disc {
+  display: list-item;
+  margin-left: 1rem;
+}
+.main .cards .lista-cards--none {
+  list-style-type: circle;
+}
+.main .cards .lista-cards--none div {
+  padding-right: 0.5rem;
+}
+
+/*---------------ESTILOS FOOTER------------------------
+------------------------------------------------------*/
+.footer__logo {
+  margin-left: 2rem;
+  width: 1.5rem;
+}
+.footer__titulo {
+  color: aliceblue;
+}/*# sourceMappingURL=style.css.map */

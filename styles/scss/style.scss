@@ -1,0 +1,86 @@
+/*********ELEMENTOS IMPORTADOS************/
+@import "./elementos/variables";
+@import "./elementos/estilos-generales";
+
+
+/*############### ESTILOS UNIVERSALES###################
+#######################################################*/
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+/*############## ESTILOS GENERALES ####################
+#######################################################*/
+.body {
+    @extend .body;
+    @extend .grid;
+}
+
+
+/*---------------ESTILOS HEADER------------------------
+------------------------------------------------------*/
+.header {
+    @extend .header; 
+    align-self: flex-start;
+    padding-top: 1.5rem;
+    &__img {
+        grid-area: imagen;
+        justify-self: center;        
+    }
+    &__titulo {
+        @extend .titulos;
+        grid-area: titulo;
+        padding: .5rem;
+        text-align: center;          
+    }
+}
+
+/*---------------ESTILOS MAIN------------------------
+------------------------------------------------------*/
+.main {
+    grid-area: contenido;    
+    .cards {        
+        &__titulo {
+            @extend .titulos;
+            padding: .25rem;
+        }
+        .lista-cards {
+            padding: 1rem 0rem;            
+            &__items {
+                display: flex;
+                padding: .25rem;                
+                &--negrita {
+                    font-weight: bold;
+                }
+            }
+            &__disc{
+                display: list-item;
+                margin-left: 1rem;
+            }
+            &--none {
+                & div{
+                    padding-right:.5rem;
+                }
+                list-style-type: circle;
+            }
+        }
+    }
+}
+
+
+
+/*---------------ESTILOS FOOTER------------------------
+------------------------------------------------------*/
+.footer {
+    @extend .footer;    
+    &__logo {
+        margin-left: 2rem;
+        width: 1.5rem;
+    }
+    &__titulo {
+        color:aliceblue;
+    }
+}

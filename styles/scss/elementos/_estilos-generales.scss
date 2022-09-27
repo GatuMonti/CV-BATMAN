@@ -1,0 +1,43 @@
+/*******ESTILOS DEL BODY******/
+.body{
+    max-width: 80vw;
+    height: auto;
+    margin: 0 auto;   
+}
+
+.grid{
+    display: grid;
+    grid-template: .9fr .5fr 2fr .5fr .1fr/ 1fr 1fr;
+    grid-template-areas:"header header" 
+                        ". ." 
+                        "contenido  contenido"
+                        ".  ."
+                        "footer footer";
+}
+
+.header{
+    background-color: map-get($colores,bg-principal);
+    display: grid;
+    grid-area: header;
+    grid-template: 3fr 1fr/ 1fr;
+    grid-template-areas:"imagen"
+                        "titulo";  
+}
+
+.titulos{
+    background-color: map-get($colores , bg-secundario);
+    color: map-get($colores,fts-principal);
+    letter-spacing: .5rem;
+    align-self: center;
+    justify-self: stretch;
+}
+
+.footer{
+    background-color: map-get($colores, fts-principal);
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+    box-shadow: 3px 6px 0px 0px rgba(0,0,0,0.6);
+}
